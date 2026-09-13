@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0b0f" />
+    <title>乐团家 · Orchestra Home</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          <div><strong>乐团家</strong><small>ORCHESTRA HOME</small></div>
+        </div>
+        <nav class="nav" aria-label="主导航">
+          <button class="nav-item active" data-view="dashboard"><i>⌂</i><span>排练总览</span></button>
+          <button class="nav-item" data-view="score"><i>♩</i><span>智能乐谱</span><b>AI</b></button>
+          <button class="nav-item" data-view="rehearsal"><i>◉</i><span>协同排练</span><em>12</em></button>
+          <button class="nav-item" data-view="members"><i>♙</i><span>成员管理</span></button>
+        </nav>
+        <div class="sidebar-foot">
+          <div class="quota"><span>本月 AI 分谱</span><strong>18 / 50</strong><div><i></i></div></div>
+          <div class="profile"><span class="avatar">林</span><div><strong>林竞</strong><small>首席指挥</small></div><button aria-label="账户菜单">•••</button></div>
+        </div>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <div><p class="eyebrow" id="eyebrow">今晚 19:30 · 音乐厅 A</p><h1 id="page-title">中央城市青年交响乐团</h1></div>
+          <div class="top-actions"><span class="live-dot">12 人在线</span><button class="ghost" id="invite-btn">邀请成员</button><button class="primary" id="new-score-btn">＋ 导入总谱</button></div>
+        </header>
+
+        <section class="view active" id="dashboard-view">
+          <div class="hero-grid">
+            <article class="next-rehearsal">
+              <div class="section-head"><div><span class="label">下一场排练</span><h2>德沃夏克 · 第九交响曲</h2></div><span class="status">准备就绪</span></div>
+              <div class="rehearsal-meta"><div><small>开始时间</small><strong>今天 19:30</strong></div><div><small>排练时长</small><strong>120 分钟</strong></div><div><small>出席情况</small><strong>38 / 42 人</strong></div></div>
+              <div class="progress-line"><span style="width:90%"></span></div>
+              <div class="hero-actions"><button class="primary wide" data-go="rehearsal">进入排练室</button><button class="ghost wide" data-go="score">查看总谱</button></div>
+            </article>
+            <article class="pulse-card"><span class="label">本周排练完成度</span><div class="ring"><div><strong>84%</strong><small>较上周 +9%</small></div></div><p>弦乐组已完成全部个人练习，铜管组还有 3 人未提交。</p></article>
+          </div>
+
+          <div class="section-title"><h2>乐团动态</h2><button>查看全部</button></div>
+          <div class="activity-grid">
+            <article><div class="activity-icon gold">♩</div><div><span>AI 分谱完成</span><strong>《第九交响曲》第四乐章</strong><small>已生成 17 个声部 · 8 分钟前</small></div></article>
+            <article><div class="activity-icon blue">✎</div><div><span>指挥新增批注</span><strong>第 126 小节 · 渐强提前</strong><small>同步至全团 · 23 分钟前</small></div></article>
+            <article><div class="activity-icon green">✓</div><div><span>练习打卡</span><strong>陈晓雨 · 第一小提琴</strong><small>32 分钟 · 今天 15:42</small></div></article>
+          </div>
+        </section>
+
+        <section class="view" id="score-view">
+          <div class="score-toolbar">
+            <div class="file-info"><span class="doc-icon">♫</span><div><strong>德沃夏克第九交响曲 · 第四乐章</strong><small>17 个声部 · 42 页 · 刚刚同步</small></div></div>
+            <div class="tool-group"><button class="tool active" data-tool="pen">✎ 批注</button><button class="tool" data-tool="mark">◯ 圈选</button><button class="tool" data-tool="text">T 文字</button><button class="tool" id="share-score">分享</button></div>
+          </div>
+          <div class="score-workspace">
+            <aside class="parts-panel">
+              <div class="parts-head"><strong>声部图层</strong><button>＋</button></div>
+              <button class="part active"><span class="part-dot conductor"></span><div><strong>指挥总谱</strong><small>全团可见</small></div><i>◉</i></button>
+              <button class="part"><span class="part-dot violin"></span><div><strong>第一小提琴</strong><small>12 位成员</small></div><i>◉</i></button>
+              <button class="part"><span class="part-dot viola"></span><div><strong>中提琴</strong><small>5 位成员</small></div><i>◉</i></button>
+              <button class="part"><span class="part-dot cello"></span><div><strong>大提琴</strong><small>4 位成员</small></div><i>◉</i></button>
+              <button class="part"><span class="part-dot winds"></span><div><strong>木管声部</strong><small>8 位成员</small></div><i>◉</i></button>
+              <button class="part"><span class="part-dot brass"></span><div><strong>铜管声部</strong><small>7 位成员</small></div><i>◉</i></button>
+              <div class="ai-box"><span>AI 识别置信度</span><strong>96.8%</strong><small>演示数据 · 可人工校对</small></div>
+            </aside>
+            <div class="score-canvas" id="score-canvas">
+              <div class="paper">
+                <div class="paper-title"><span>IV. Allegro con fuoco</span><small>A. Dvořák</small></div>
+                <div class="system"><span class="clef">𝄞</span><div class="staff"></div><b class="notes n1">♪ ♫ ♩ ♩</b></div>
+                <div class="system"><span class="clef">𝄞</span><div class="staff"></div><b class="notes n2">♩ ♩ ♪ ♫</b></div>
+                <div class="system"><span class="clef">𝄢</span><div class="staff"></div><b class="notes n3">♫ ♪ ♩ ♩</b></div>
+                <div class="annotation a1"><span>126</span><p>渐强提前两拍，弦乐保持弓速</p></div>
+                <div class="annotation a2"><span>132</span><p>铜管收一点，留出木管主题</p></div>
+                <svg class="markup" viewBox="0 0 800 500" aria-hidden="true"><path d="M180 223 C285 190 430 198 565 225"/><path d="M574 224 l-22 -12 m22 12 l-20 15"/><ellipse cx="490" cy="345" rx="82" ry="32"/></svg>
+              </div>
+              <div class="zoom"><button>−</button><span>85%</span><button>＋</button></div>
+              <div class="cursor cursor-1"><i></i><span>林竞</span></div><div class="cursor cursor-2"><i></i><span>陈晓雨</span></div>
+            </div>
+            <aside class="comments-panel">
+              <div class="parts-head"><strong>实时讨论</strong><span class="online">12</span></div>
+              <div class="comment"><span class="avatar coral">林</span><div><strong>林竞 <small>19:42</small></strong><p>第 126 小节弦乐提前做渐强，注意不要冲拍。</p></div></div>
+              <div class="comment"><span class="avatar blue-bg">陈</span><div><strong>陈晓雨 <small>19:43</small></strong><p>收到，第一小提琴已标记。</p></div></div>
+              <div class="comment"><span class="avatar green-bg">周</span><div><strong>周凯 <small>19:44</small></strong><p>圆号从 132 小节开始收音量。</p></div></div>
+              <div class="chat-input"><input id="chat-input" placeholder="发送排练消息…"/><button id="send-chat">↑</button></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="rehearsal-view">
+          <div class="rehearsal-layout">
+            <article class="session-stage">
+              <div class="stage-top"><div><span class="live-badge">LIVE</span><strong>德沃夏克 · 第九交响曲</strong></div><span id="timer">00:42:18</span></div>
+              <div class="orchestra-map">
+                <div class="conductor-spot"><span>林</span><small>指挥</small></div>
+                <div class="section-row strings"><button>Vln I <b>12</b></button><button>Vln II <b>9</b></button><button>Viola <b>5</b></button><button>Cello <b>4</b></button></div>
+                <div class="section-row winds"><button>Flute <b>2</b></button><button>Oboe <b>2</b></button><button>Clarinet <b>2</b></button><button>Bassoon <b>2</b></button></div>
+                <div class="section-row brass"><button>Horn <b>4</b></button><button>Trumpet <b>2</b></button><button>Trombone <b>3</b></button></div>
+                <p>点击声部即可定向发送批注</p>
+              </div>
+              <div class="session-controls"><button id="mic-btn" class="round active">⌁<small>麦克风</small></button><button class="round" data-go="score">♩<small>同步乐谱</small></button><button id="record-btn" class="round">●<small>录音分析</small></button><button id="end-btn" class="round danger">■<small>结束排练</small></button></div>
+            </article>
+            <aside class="agenda">
+              <span class="label">排练议程</span><h2>今晚的重点</h2>
+              <div class="agenda-item done"><i>✓</i><div><strong>第一乐章</strong><small>平衡与速度 · 25 分钟</small></div></div>
+              <div class="agenda-item active"><i>2</i><div><strong>第四乐章</strong><small>铜管进入与尾声 · 35 分钟</small></div></div>
+              <div class="agenda-item"><i>3</i><div><strong>全曲连排</strong><small>记录问题 · 40 分钟</small></div></div>
+              <div class="insight"><span>AI 录音分析</span><strong>节奏一致性 87%</strong><div><i style="width:87%"></i></div><p>木管进入比指挥拍点平均晚 0.18 秒。</p><small>演示数据</small></div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="view" id="members-view">
+          <div class="members-summary"><div><small>团员总数</small><strong>42</strong><span>4 个声部组</span></div><div><small>本周出勤</small><strong>91%</strong><span>较上周 +4%</span></div><div><small>练习提交</small><strong>36</strong><span>还有 6 人待提交</span></div></div>
+          <div class="member-table-wrap"><div class="table-head"><div><h2>成员与声部</h2><p>排练权限、出勤与个人练习进度</p></div><input id="member-search" placeholder="搜索姓名或声部"/></div>
+            <table><thead><tr><th>成员</th><th>声部</th><th>本周练习</th><th>出勤</th><th>状态</th></tr></thead><tbody id="members-body"></tbody></table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal" id="import-modal" aria-hidden="true">
+      <div class="modal-card"><button class="close" data-close>×</button><span class="label">AI 乐谱处理</span><h2>导入一份总谱</h2><p>系统将识别乐器名称、小节与声部，并生成可编辑的独立分谱。</p><label class="dropzone" id="dropzone"><input type="file" accept="application/pdf"/><span>♫</span><strong>拖入 PDF，或点击选择文件</strong><small>演示模式无需真实上传</small></label><button class="primary wide" id="simulate-import">使用示例总谱演示</button></div>
+    </div>
+    <div class="modal" id="process-modal" aria-hidden="true"><div class="modal-card processing"><div class="spinner"></div><span class="label">正在处理</span><h2 id="process-title">识别总谱结构</h2><p id="process-detail">正在定位乐器名称与谱表…</p><div class="process-bar"><i id="process-bar"></i></div><strong id="process-percent">18%</strong></div></div>
+    <div class="toast" id="toast"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
